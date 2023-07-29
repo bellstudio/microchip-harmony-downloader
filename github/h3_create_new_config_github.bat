@@ -62,17 +62,17 @@ IF EXIST catalog (
 	)
 
 @echo.Remove old configuration files...
-del /Q h3github*.ini
+del /Q h3repo_github*.ini
 @echo. Searching Device...
-python decode_catalog.py -f configfile -t devices >> h3github_devices_config.ini
+python h3_create_config_decode_catalog.py -f configfile -t devices >> h3repo_github_devices_config.ini
 @echo. Searching APIs...
-python decode_catalog.py -f configfile -t api >> h3github_lib_config.ini
+python h3_create_config_decode_catalog.py -f configfile -t api >> h3repo_github_lib_config.ini
 @echo. Searching Documents...
-python decode_catalog.py -f configfile -t documentation >> h3github_docs_config.ini
+python h3_create_config_decode_catalog.py -f configfile -t documentation >> h3repo_github_docs_config.ini
 @echo. Searching app_demos...
-python decode_catalog.py -f configfile -t application >> h3github_app_config.ini
+python h3_create_config_decode_catalog.py -f configfile -t application >> h3repo_github_app_config.ini
 @echo. Searching external libs...
-python decode_catalog.py -f configfile -t external >> h3github_external_config.ini
+python h3_create_config_decode_catalog.py -f configfile -t external >> h3repo_github_external_config.ini
 
 @echo New config files generated with success!
 

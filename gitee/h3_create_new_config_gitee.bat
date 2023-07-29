@@ -62,17 +62,17 @@ IF EXIST catalog (
 	)
 
 @echo.Remove old configuration files...
-del /Q h3gitee*.ini
+del /Q h3repo_gitee*.ini
 @echo. Searching Device...
-python decode_catalog.py -f configfile -t devices >> h3gitee_devices_config.ini
+python h3_create_config_decode_catalog.py -f configfile -t devices >> h3repo_gitee_devices_config.ini
 @echo. Searching APIs...
-python decode_catalog.py -f configfile -t api >> h3gitee_libs_config.ini
+python h3_create_config_decode_catalog.py -f configfile -t api >> h3repo_gitee_libs_config.ini
 @echo. Searching Document...
-python decode_catalog.py -f configfile -t documentation >> h3gitee_docs_config.ini
+python h3_create_config_decode_catalog.py -f configfile -t documentation >> h3repo_gitee_docs_config.ini
 @echo. Searching app_demo...
-python decode_catalog.py -f configfile -t application >> h3gitee_app_config.ini
+python h3_create_config_decode_catalog.py -f configfile -t application >> h3repo_gitee_app_config.ini
 @echo. Searching external libs...
-python decode_catalog.py -f configfile -t external >> h3gitee_external_config.ini
+python h3_create_config_decode_catalog.py -f configfile -t external >> h3repo_gitee_external_config.ini
 
 @echo New config files generated with success!
 
