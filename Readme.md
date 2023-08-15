@@ -1,5 +1,5 @@
-这是一套帮助下载Microchip Harmony Framework的工具
-# 运行环境
+# 这是一套帮助下载Microchip Harmony Framework的工具
+## 运行环境
 python相关脚本需要python3，并安装PyYAML
 
 ## h3 下载配置工具
