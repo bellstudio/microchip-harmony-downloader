@@ -25,7 +25,7 @@ def check_dependency_yml(r_name):
     xfilepath = Path(str(r_name)+'/'+'package.xml')
     # print(filepath.exists())
     if filepath.exists():
-        with open(filepath, 'r') as file:
+        with open(filepath, 'r', encoding='utf-8') as file:
             prime_service = yaml.safe_load(file)
             if 'dependencies' in prime_service['package']:
                 for item1 in prime_service['package']['dependencies']:

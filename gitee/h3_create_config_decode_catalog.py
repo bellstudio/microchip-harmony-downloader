@@ -22,7 +22,7 @@ def list_all_ymls_old(base_path):
     for files in fileNames:
         if files.endswith('.yml'):
             filepath = base_path + '/' + files
-            with open(filepath, 'r') as file:
+            with open(filepath, 'r', encoding='utf-8') as file:
                 prime_service = yaml.safe_load(file)
                 for item in prime_service['catalog']['host']['packages']:
                     # print(files)

@@ -34,7 +34,7 @@ def list_dependency_ymls(pack_type):
             # if files == 'package.yml':
                 # filepath = './' + dir + '/' + files
                 # print(filepath)
-                with open(filepath, 'r') as file:
+                with open(filepath, 'r', encoding='utf-8') as file:
                     prime_service = yaml.safe_load(file)
                     if 'dependencies' in prime_service['package']:
                         if pack_type == 'all':
